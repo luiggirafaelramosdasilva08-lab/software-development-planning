@@ -1,0 +1,116 @@
+Responsável: Luiggi Rafael Ramos da SIlva
+
+Descrição geral do sistema
+O sistema oferecerá soluções em administração para uma clínica veterinária, disponibilizando funcionalidades para as operações cotidianas do estabelecimento,
+as quais abrangem cadastros, consultas e pagamentos. 
+
+Descrição geral dos usuários
+Os usuários do sistema dividem-se basicamente em três grupos:
+Gerentes – Têm acesso a todas as funcionalidades do sistema e cadastra os outros usuários.
+Atendentes – Têm acesso às funcionalidades de cadastro, busca, agendamento de consultas e venda do sistema.
+Veterinários – Tem acesso às funcionalidades de registro das consultas e busca.
+
+Requisitos funcionais(RF)
+Informe no mínimo cinco requisitos funcionais. Cada requisito funcional é uma parte do que o cliente deseja que o software faça. Considerando o enunciado, identifique
+os requisitos funcionais, coloque um nome (que deve ser único), marque os usuários envolvidos e descreva o requisito. Baseie-se no exemplo RF001 para desenvolver os tópicos.
+
+[RF001] Cadastro de animais
+Usuário(s): ( ) Gerente | (X) Atendentes | ( ) Veterinários
+Descrição: usuário do sistema consegue criar um cadastro novo ou alterar as informações de um cadastro existente. 
+As informações presentes na ficha criada são: nome, tipo (gato, cachorro, hamster etc.), raça, idade. O tutor responsável pelo animal deve fornecer esses dados no momento do cadastro do animal.
+Para que o cadastro seja concluído, é necessário vincular a ficha do animal a uma ficha de tutor já cadastrada no sistema.
+
+[RF002] Cadastro dos tutores
+Usuário(s): ( ) Gerente | (x) Atendentes | ( ) Veterinários
+Descrição: O sistema deve permitir que os atendentes cadastre os dados pessoais do tutor como CPF,nome completo,endereço e telefone.
+
+
+
+
+[RF003] Agendamento ou cancelamento de consultas
+Usuário(s): ( ) Gerente | (x) Atendentes | ( ) Veterinários
+Descrição: O sistema deve permitir os atendentes veja os horarios disponiveis para consulta e os dias, tambem para cancelar consultas ja marcadas ou até mesmo edição.
+
+
+
+
+[RF004] Impedimeto de agendamendo de consulto
+Usuário(s): ( ) Gerente | (x) Atendentes | ( ) Veterinários
+Descrição: Deve impedir atendentes de agendar consultas para animais ou tutores que não estejam com seu cadastro pronto.
+
+
+
+
+[RF005] Informações sobre as consultas 
+Usuário(s): ( ) Gerente | ( ) Atendentes | (x) Veterinários
+Descrição: Deve permitir que os veterinários coloquem todas observações sobre a consulta do animal indicado tratamento, diagnóstico doque o animal e o qual 
+foi o veterinario responsavel por fazer a consulta.
+
+
+
+
+[RF006] Cadastro de funcionarios
+Usuário(s): (x) Gerente | ( ) Atendentes | ( ) Veterinários
+Descrição: O sistema deve permitir que o gerente cadastre os funcionários e gerencie os acessos ao sistema.
+
+
+
+Requisitos não funcionais(RNF)
+Informe no mínimo dois requisitos não funcionais. Os requisitos não funcionais são demandas para o software que não são diretamente relacionadas a uma parte 
+específica do que o software será capaz de fazer, e sim relacionadas a como o software será feito. Considerando o enunciado, identifique os requisitos não funcionais,
+coloque um nome (que deve ser único) e descreva o requisito. Baseie-se no exemplo RNF001 para desenvolver os tópicos.
+
+[RNF001] Computadores 
+Descrição: As máquinas disponíveis para os funcionários na clínica veterinária são computadores, por isso, o software deve ser um sistema compatível com esse tipo de maquinário.
+
+[RNF002] Sistema sem conexão a internet
+Descrição: O sistema deve funcionar normalmente sem depender de conexão com a internet.
+
+[RNF003] Autenticação por login e senha
+Descrição: O sistema deve possuir autenticação por login e senha, permitindo acesso apenas a usuários autorizados.
+
+
+Casos de uso:
+
+Caso de uso 1
+Identificação do requisito funcional: RF001 - Cadastro de animais
+Passos:
+Usuário acessa o sistema, fornecendo login e senha.
+Sistema exibe uma tela com as opções ‘Marcar consulta’, ‘Novo cadastro’ e ‘Busca’.
+Usuário clica na opção ‘Novo cadastro’.
+Sistema exibe uma tela com as opções ‘Cadastro de animal' e 'Cadastro de tutor’.
+Usuário clica na opção ‘Cadastro de animal’.
+Usuário preenche os campos correspondentes.
+Usuário clica na opção “Avançar”.
+Usuário insere no sistema o número do CPF do tutor.
+Usuário clica na opção “Buscar”.
+Sistema exibe uma lista com apenas um resultado.
+Usuário clica no cadastro apresentado.
+Sistema exibe informações de cadastro do tutor.
+Usuário clica na opção ‘Vincular animal ao tutor’.
+Sistema exibe uma tela de confirmação do cadastro.
+
+Caso de uso 2
+Identificação do requisito funcional: Agendar Consultas
+Passos:
+O atendente realiza login no sistema.
+O atendente pesquisa o tutor pelo CPF ou nome.
+O sistema verifica se o tutor está cadastrado.
+O atendente seleciona o animal do tutor.
+O sistema verifica se o animal está cadastrado.
+O sistema apresenta os dias e horários disponíveis.
+O atendente escolhe a data e o horário.
+O sistema registra o agendamento e confirma a operação.
+
+
+Caso de uso 3
+Identificação do requisito funcional: Registrar atendimento
+Passos:
+O veterinário realiza login no sistema.
+Pesquisa o animal pelo nome.
+Seleciona a consulta realizada.
+Registra o diagnóstico.
+Registra os tratamentos indicados.
+Confirma o veterinário responsável pelo atendimento.
+Salva as informações.
+O sistema atualiza o histórico do animal.
